@@ -1,0 +1,45 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.book-card-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  height: 100%; /* ensure parent has height */
+  min-height: 100vh; /* optional */
+  z-index: 0;
+}
+
+.book-card-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('../assets/bookicon.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: -1;
+  pointer-events: none;
+  height: 100%; /* ensure parent has height */
+}
+
+.pagination{ display: flex; justify-content: center; width: 100%; } 
+
+.pagination__list{ display: flex; /* justify-content: center; */ width: 50%; /* overflow: hidden; */ padding: 0; } 
+
+.pagination__left-btn{ display: flex; align-items: center; cursor: pointer; } 
+
+.pagination__page-btn{ list-style-type: none; border: 1px solid black; padding: 0.5rem 1rem; 
+    margin: 0 1rem; width: 33%; cursor: pointer; /* transform: translateX(-159%); */ } 
+
+.pagination__right-btn{ display: flex; align-items: center; cursor: pointer; } 
+
+.pagination__nav{ display: flex; width: 30%; overflow: hidden; } 
+
+.pagination__active-page{ background-color: black; color: white; } 

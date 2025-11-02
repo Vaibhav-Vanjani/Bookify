@@ -1,0 +1,106 @@
+.newbook-card {
+  width: 220px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.newbook-card:hover {
+  transform: translateY(-4px);
+}
+
+.newbook-image {
+  width: 100%;
+    height: 191px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.newbook-info {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.newbook-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px 0;
+  color: #333;
+}
+
+.newbook-price {
+  font-size: 14px;
+  color: #555;
+}
+
+.newbook-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-btn {
+  background-color: #6fcf97;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.qty-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.qty-count {
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 20px;
+  text-align: center;
+}
+
+.add-btn {
+  padding: 6px 18px;
+  font-size: 14px;
+  background-color: #6fcf97;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #6fcf97;
+}
+
+.remove-btn {
+  padding: 4px 12px;
+  font-size: 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #c82333;
+}

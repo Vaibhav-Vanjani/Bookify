@@ -1,0 +1,85 @@
+.order-success-svg-wrapper {
+  /* opacity: 0; */
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: inline-block;
+}
+
+
+.checkmark-svg {
+  stroke-width: 4;
+  stroke: #4caf50;
+  stroke-miterlimit: 10;
+  display: block;
+  margin: auto;
+  overflow: visible;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+  animation: circle-anim 0.6s forwards ease-in-out;
+}
+
+.checkmark__check {
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: check-anim 0.3s 0.6s forwards ease-in-out;
+}
+
+@keyframes circle-anim {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes check-anim {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.order-success-svg-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.order-success-svg-wrapper h2 {
+  margin-top: 1rem;
+  color: #2e7d32;
+}
+
+
+.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Optional: Hide it completely when needed */
+.hide {
+  opacity: 0;
+  display: none;
+  /* visibility: hidden; */
+}
+
+.order-summary-heading{
+  text-align: center;
+}
+
+.shop-more-btn {
+  background-color: #2e7d32;
+  color: white;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.shop-more-btn:hover {
+  background-color: #1b5e20; /* darker green */
+}

@@ -1,0 +1,377 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.main-container{
+      position: relative;
+}
+
+/* new form csss start*/
+
+/* Section fixed to viewport */
+.form-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Form container */
+.form-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+  background: transparent;
+  border: none;
+  outline: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.form-close:hover {
+  color: #000;
+  transform: scale(1.2);
+}
+
+/* First and last name fields */
+.form-name-fields {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-name-fields input {
+  flex: 1;
+}
+
+/* Inputs */
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="email"]
+ {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  width: 100%;
+  box-sizing: border-box; 
+}
+.form-container input:focus {
+  border-color: #007bff;
+}
+
+/* Submit button */
+.form-submit-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.form-submit-btn:hover {
+  background-color: #218838;
+}
+
+
+
+/* end form css  */
+
+
+.header {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header__ul--left,
+.header__ul--center,
+.header__ul--right {
+  flex: 1;
+}
+
+.header__ul--center {
+  justify-content: center;
+}
+
+.header__ul--right {
+  justify-content: flex-end;
+}
+
+.header__li {
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__logo-img {
+  height: 40px;
+  cursor: pointer;
+}
+
+.header__search-input {
+  padding: 0.5rem 1rem;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 200px;
+}
+
+.header__search-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #ccc;
+  border-left: none;
+  cursor: pointer;
+  background-color: #555;
+  color: white;
+}
+
+.header__search-btn:hover {
+  background-color: #444;
+}
+
+.header__actions .btn--signup {
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #ff6600;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header__actions .btn--signup:hover {
+  background-color: #e65c00
+}
+
+.header__ul--center {
+  flex: 2; /* Give center more space */
+  justify-content: center;
+}
+
+.header__search-li {
+  display: flex;
+  width: 100%;
+  max-width: 600px; /* max width for large screens */
+}
+
+.header__search-input {
+  flex-grow: 1; /* Take up all available space */
+  padding: 0.5rem 1rem;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  min-width: 0; /* for flexbox to shrink properly */
+}
+
+.header__search-input:focus {
+  border-color: #ff6600;
+  box-shadow: 0 0 5px #ff6600;
+}
+
+.header__search-btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #ccc;
+  border-left: none;
+  cursor: pointer;
+  background-color: #555;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.header__search-btn:hover {
+  background-color: #444;
+}
+
+.header__cart{
+  position: relative;
+  cursor: pointer;
+}
+
+.header__cart-size{
+      position: absolute;
+    top: -0.7rem;
+    right: -0.8rem;
+    border: 1px solid red;
+    background: red;
+    border-radius: 0.7rem;
+    padding: 0.2rem;
+
+}
+
+.profile-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.header__profile {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.header__profile:hover {
+  background-color: #0056b3;
+}
+
+/* Dropdown hidden by default */
+.profile-dropdown {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  /* min-width: 200px; */
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+/* Show dropdown on hover */
+.profile-dropdown-container:hover .profile-dropdown {
+  display: flex;
+}
+
+.profile-dropdown__item {
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  color: #333;
+  white-space: nowrap;
+}
+
+.profile-dropdown__item-img
+{
+    width:50%;
+    display: flex;
+    align-self: center;
+}
+
+.profile-dropdown__item a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.profile-dropdown__item a:hover {
+  text-decoration: underline;
+}
+
+/* Logout button */
+.profile-dropdown__logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  margin: 0.5rem 1rem;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.profile-dropdown__logout-btn:hover {
+  background-color: #c82333;
+}
+
+.back-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 16px 0.5rem;
+}
+
+
+.search-loading-container{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 5;
+    background: aliceblue;
+    opacity: 0.9;
+}
+
+.search-loading-container-box
+{
+  position: relative;
+  top: 20%;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .header__ul--center {
+    flex: 1;
+  }
+  .header__search-li {
+    max-width: 100%;
+  }
+  .header__search-input {
+    font-size: 0.9rem;
+  }
+  .header__search-btn {
+    padding: 0.4rem 0.8rem;
+  }
+}

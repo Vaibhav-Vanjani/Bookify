@@ -1,0 +1,40 @@
+.no-match-container {
+  text-align: center;
+  /* margin-top: 50px; */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  color: #444;
+  font-family: Arial, sans-serif;
+}
+
+.search-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.search-term {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.no-match-text {
+  font-size: 20px;
+  color: #dc3545;
+  font-weight: bold;
+}
+
+
+.no-match-message {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-top: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-term {
+  font-weight: 600;
+  color: #007bff; /* Bootstrap blue */
+}
